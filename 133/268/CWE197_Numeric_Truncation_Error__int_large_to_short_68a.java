@@ -27,12 +27,12 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_68a extends Abs
         data = Short.MAX_VALUE + 5;
 
         (new CWE197_Numeric_Truncation_Error__int_large_to_short_68b()).badSink();
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -42,7 +42,7 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_68a extends Abs
         data = 2;
 
         (new CWE197_Numeric_Truncation_Error__int_large_to_short_68b()).goodG2BSink();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -53,5 +53,5 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_68a extends Abs
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

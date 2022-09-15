@@ -22,11 +22,11 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_54b
     public void badSink(short data ) throws Throwable
     {
         (new CWE197_Numeric_Truncation_Error__short_Environment_54c()).badSink(data );
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(short data ) throws Throwable
     {
         (new CWE197_Numeric_Truncation_Error__short_Environment_54c()).goodG2BSink(data );
-    }
-}
+    } 
+} 
