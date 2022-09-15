@@ -21,7 +21,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.Socket;
 
-import java.util.logging.Level;
+import java.util.logging.Level; 
 
 public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_42 extends AbstractTestCase
 {
