@@ -29,7 +29,7 @@ public class CWE197_Numeric_Truncation_Error__int_random_to_short_61b
         data = (new SecureRandom()).nextInt();
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public int goodG2BSource() throws Throwable
@@ -40,5 +40,5 @@ public class CWE197_Numeric_Truncation_Error__int_random_to_short_61b
         data = 2;
 
         return data;
-    }
-}
+    } 
+} 

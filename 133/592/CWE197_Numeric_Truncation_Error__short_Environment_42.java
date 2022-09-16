@@ -35,16 +35,16 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_42 extends Abstr
                 try
                 {
                     data = Short.parseShort(stringNumber.trim());
-                }
+                } 
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         return data;
-    }
+    } 
 
     /* use badsource and badsink */
     public void bad() throws Throwable
@@ -54,9 +54,9 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_42 extends Abstr
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }
+        } 
 
-    }
+    } 
 
     private short goodG2BSource() throws Throwable
     {
@@ -66,7 +66,7 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_42 extends Abstr
         data = 2;
 
         return data;
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -76,14 +76,14 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_42 extends Abstr
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }
+        } 
 
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -94,6 +94,6 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_42 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
+    } 
 
-}
+} 

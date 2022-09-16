@@ -27,9 +27,9 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_short_74b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }
+        } 
 
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(HashMap<Integer,Integer> dataHashMap ) throws Throwable
@@ -39,7 +39,7 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_short_74b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }
+        } 
 
-    }
-}
+    } 
+} 
