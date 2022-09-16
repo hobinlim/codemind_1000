@@ -22,7 +22,7 @@ import javax.servlet.http.*;
 
 import java.net.URLEncoder;
 
-public class CWE113_HTTP_Response_Splitting__Property_setHeaderServlet_04 extends AbstractTestCaseServlet
+public class CWE113_HTTP_Response_Splitting__Property_setHeaderServlet_04 extends AbstractTestCaseServlet 
 {
     /* The two variables below are declared "final", so a tool should
      * be able to identify that reads of these will always return their
