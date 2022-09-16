@@ -29,12 +29,12 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_66a extends Abst
         int[] dataArray = new int[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__int_large_to_byte_66b()).badSink(dataArray  );
-    } 
+    }  
 
     public void good() throws Throwable
     {
         goodG2B();
-    } 
+    }  
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -47,7 +47,7 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_66a extends Abst
         int[] dataArray = new int[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__int_large_to_byte_66b()).goodG2BSink(dataArray  );
-    } 
+    }  
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -58,5 +58,5 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_66a extends Abst
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    } 
-} 
+    }  
+}  
