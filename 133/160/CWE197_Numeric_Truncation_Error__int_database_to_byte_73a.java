@@ -55,17 +55,17 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_byte_73a extends A
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }     
+                    }      
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }     
-                }     
-            }     
+                    }      
+                }      
+            }      
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }     
+            }      
             finally
             {
                 /* Close database objects */
@@ -74,50 +74,50 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_byte_73a extends A
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }     
+                }      
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }     
+                }      
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }     
-            }     
-        }     
+                }      
+            }      
+        }      
 
         LinkedList<Integer> dataLinkedList = new LinkedList<Integer>();
         dataLinkedList.add(0, data);
         dataLinkedList.add(1, data);
         dataLinkedList.add(2, data);
         (new CWE197_Numeric_Truncation_Error__int_database_to_byte_73b()).badSink(dataLinkedList  );
-    }     
+    }      
 
     public void good() throws Throwable
     {
         goodG2B();
-    }     
+    }      
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -132,7 +132,7 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_byte_73a extends A
         dataLinkedList.add(1, data);
         dataLinkedList.add(2, data);
         (new CWE197_Numeric_Truncation_Error__int_database_to_byte_73b()).goodG2BSink(dataLinkedList  );
-    }     
+    }      
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -143,6 +143,6 @@ public class CWE197_Numeric_Truncation_Error__int_database_to_byte_73a extends A
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }     
+    }      
 
-}     
+}      

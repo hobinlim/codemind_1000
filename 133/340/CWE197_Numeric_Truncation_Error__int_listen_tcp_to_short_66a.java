@@ -57,17 +57,17 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66a extend
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }     
+                    }      
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }     
-                }     
-            }     
+                    }      
+                }      
+            }      
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }     
+            }      
             finally
             {
                 /* Close stream reading objects */
@@ -76,24 +76,24 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66a extend
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }     
+                }      
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }     
+                }      
 
                 /* Close socket objects */
                 try
@@ -101,36 +101,36 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66a extend
                     if (socket != null)
                     {
                         socket.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }     
+                }      
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }     
-            }     
-        }     
+                }      
+            }      
+        }      
 
         int[] dataArray = new int[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66b()).badSink(dataArray  );
-    }     
+    }      
 
     public void good() throws Throwable
     {
         goodG2B();
-    }     
+    }      
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -143,7 +143,7 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66a extend
         int[] dataArray = new int[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66b()).goodG2BSink(dataArray  );
-    }     
+    }      
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -154,5 +154,5 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_66a extend
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }     
-}     
+    }      
+}      
