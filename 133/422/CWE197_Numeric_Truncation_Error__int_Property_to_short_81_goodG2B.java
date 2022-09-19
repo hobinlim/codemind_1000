@@ -25,7 +25,7 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_81_goodG2B e
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }   
+        }    
 
-    }   
-}   
+    }    
+}    

@@ -34,15 +34,15 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_61b
             try
             {
                 data = Integer.parseInt(stringNumber.trim());
-            }   
+            }    
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-            }   
-        }   
+            }    
+        }    
 
         return data;
-    }   
+    }    
 
     /* goodG2B() - use goodsource and badsink */
     public int goodG2BSource() throws Throwable
@@ -53,5 +53,5 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_61b
         data = 2;
 
         return data;
-    }   
-}   
+    }    
+}    

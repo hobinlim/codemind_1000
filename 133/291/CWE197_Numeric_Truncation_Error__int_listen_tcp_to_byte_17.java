@@ -57,17 +57,17 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_byte_17 extends 
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }   
+                    }    
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }   
-                }   
-            }   
+                    }    
+                }    
+            }    
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }   
+            }    
             finally
             {
                 /* Close stream reading objects */
@@ -76,24 +76,24 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_byte_17 extends 
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }   
-                }   
+                    }    
+                }    
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }   
+                }    
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }   
-                }   
+                    }    
+                }    
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }   
+                }    
 
                 /* Close socket objects */
                 try
@@ -101,35 +101,35 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_byte_17 extends 
                     if (socket != null)
                     {
                         socket.close();
-                    }   
-                }   
+                    }    
+                }    
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }   
+                }    
 
                 try
                 {
                     if (listener != null)
                     {
                         listener.close();
-                    }   
-                }   
+                    }    
+                }    
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ServerSocket", exceptIO);
-                }   
-            }   
-        }   
+                }    
+            }    
+        }    
 
         for (int i = 0; i < 1; i++)
         {
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }   
-        }   
-    }   
+            }    
+        }    
+    }    
 
     /* goodG2B() - use goodsource and badsink by reversing the block outside the
      * for statement with the one in the for statement */
@@ -145,14 +145,14 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_byte_17 extends 
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }   
-        }   
-    }   
+            }    
+        }    
+    }    
 
     public void good() throws Throwable
     {
         goodG2B();
-    }   
+    }    
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -163,5 +163,5 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_byte_17 extends 
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }   
-}   
+    }    
+}    

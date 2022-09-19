@@ -35,21 +35,21 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_16 extends A
                 try
                 {
                     data = Integer.parseInt(stringNumber.trim());
-                }   
+                }    
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                }   
-            }   
+                }    
+            }    
             break;
-        }   
+        }    
 
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }   
+        }    
 
-    }   
+    }    
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -61,19 +61,19 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_16 extends A
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
             break;
-        }   
+        }    
 
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }   
+        }    
 
-    }   
+    }    
 
     public void good() throws Throwable
     {
         goodG2B();
-    }   
+    }    
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -84,5 +84,5 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_16 extends A
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }   
-}   
+    }    
+}    

@@ -57,17 +57,17 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_31 exten
                         try
                         {
                             data = Integer.parseInt(stringNumber.trim());
-                        }   
+                        }    
                         catch (NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                        }   
-                    }   
-                }   
+                        }    
+                    }    
+                }    
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }   
+                }    
                 finally
                 {
                     /* clean up stream reading objects */
@@ -76,44 +76,44 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_31 exten
                         if (readerBuffered != null)
                         {
                             readerBuffered.close();
-                        }   
-                    }   
+                        }    
+                    }    
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                    }   
+                    }    
 
                     try
                     {
                         if (readerInputStream != null)
                         {
                             readerInputStream.close();
-                        }   
-                    }   
+                        }    
+                    }    
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                    }   
-                }   
-            }   
+                    }    
+                }    
+            }    
 
             dataCopy = data;
-        }   
+        }    
         {
             int data = dataCopy;
 
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }   
+            }    
 
-        }   
-    }   
+        }    
+    }    
 
     public void good() throws Throwable
     {
         goodG2B();
-    }   
+    }    
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -126,17 +126,17 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_31 exten
             data = 2;
 
             dataCopy = data;
-        }   
+        }    
         {
             int data = dataCopy;
 
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }   
+            }    
 
-        }   
-    }   
+        }    
+    }    
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -147,5 +147,5 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_31 exten
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }   
-}   
+    }    
+}    

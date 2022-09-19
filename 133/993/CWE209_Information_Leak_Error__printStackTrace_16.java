@@ -26,14 +26,14 @@ public class CWE209_Information_Leak_Error__printStackTrace_16 extends AbstractT
             try
             {
                 throw new UnsupportedOperationException();
-            } 
+            }  
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 exceptUnsupportedOperation.printStackTrace(); /* FLAW: Print stack trace to console on error */
-            } 
+            }  
             break;
-        } 
-    } 
+        }  
+    }  
 
     /* good1() change the conditions on the while statements */
     private void good1() throws Throwable
@@ -43,19 +43,19 @@ public class CWE209_Information_Leak_Error__printStackTrace_16 extends AbstractT
             try
             {
                 throw new UnsupportedOperationException();
-            } 
+            }  
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 IO.writeLine("There was an unsupported operation error"); /* FIX: print a generic message */
-            } 
+            }  
             break;
-        } 
-    } 
+        }  
+    }  
 
     public void good() throws Throwable
     {
         good1();
-    } 
+    }  
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -66,5 +66,5 @@ public class CWE209_Information_Leak_Error__printStackTrace_16 extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    } 
-} 
+    }  
+}  
