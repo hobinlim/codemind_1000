@@ -54,17 +54,17 @@ public class CWE197_Numeric_Truncation_Error__short_database_17 extends Abstract
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }  
+                    }   
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }  
-                }  
-            }  
+                    }   
+                }   
+            }   
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }  
+            }   
             finally
             {
                 /* Close database objects */
@@ -73,47 +73,47 @@ public class CWE197_Numeric_Truncation_Error__short_database_17 extends Abstract
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }  
+                }   
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }  
+                }   
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }  
-            }  
-        }  
+                }   
+            }   
+        }   
 
         for (int i = 0; i < 1; i++)
         {
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }  
-        }  
-    }  
+            }   
+        }   
+    }   
 
     /* goodG2B() - use goodsource and badsink by reversing the block outside the
      * for statement with the one in the for statement */
@@ -129,14 +129,14 @@ public class CWE197_Numeric_Truncation_Error__short_database_17 extends Abstract
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }  
-        }  
-    }  
+            }   
+        }   
+    }   
 
     public void good() throws Throwable
     {
         goodG2B();
-    }  
+    }   
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -147,5 +147,5 @@ public class CWE197_Numeric_Truncation_Error__short_database_17 extends Abstract
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }  
-}  
+    }   
+}   

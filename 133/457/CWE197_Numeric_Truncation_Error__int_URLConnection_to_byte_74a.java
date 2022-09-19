@@ -55,17 +55,17 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74a exte
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }    
+                    }     
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }    
-                }    
-            }    
+                    }     
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }    
+            }     
             finally
             {
                 /* clean up stream reading objects */
@@ -74,38 +74,38 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74a exte
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }    
-                }    
+                    }     
+                }     
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }    
+                }     
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }    
-                }    
+                    }     
+                }     
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }    
-            }    
-        }    
+                }     
+            }     
+        }     
 
         HashMap<Integer,Integer> dataHashMap = new HashMap<Integer,Integer>();
         dataHashMap.put(0, data);
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74b()).badSink(dataHashMap  );
-    }    
+    }     
 
     public void good() throws Throwable
     {
         goodG2B();
-    }    
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -120,7 +120,7 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74a exte
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74b()).goodG2BSink(dataHashMap  );
-    }    
+    }     
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -131,5 +131,5 @@ public class CWE197_Numeric_Truncation_Error__int_URLConnection_to_byte_74a exte
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }    
-}    
+    }     
+}     

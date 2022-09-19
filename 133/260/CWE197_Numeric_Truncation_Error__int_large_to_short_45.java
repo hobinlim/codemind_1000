@@ -29,9 +29,9 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_45 extends Abst
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }    
+        }     
 
-    }    
+    }     
 
     /* uses badsource and badsink */
     public void bad() throws Throwable
@@ -43,12 +43,12 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_45 extends Abst
 
         dataBad = data;
         badSink();
-    }    
+    }     
 
     public void good() throws Throwable
     {
         goodG2B();
-    }    
+    }     
 
     private void goodG2BSink() throws Throwable
     {
@@ -57,9 +57,9 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_45 extends Abst
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }    
+        }     
 
-    }    
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -71,7 +71,7 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_45 extends Abst
 
         dataGoodG2B = data;
         goodG2BSink();
-    }    
+    }     
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -82,5 +82,5 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_45 extends Abst
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }    
-}    
+    }     
+}     

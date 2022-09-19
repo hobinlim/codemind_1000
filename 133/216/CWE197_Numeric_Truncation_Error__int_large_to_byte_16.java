@@ -28,14 +28,14 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_16 extends Abstr
             /* FLAW: Use a number larger than Short.MAX_VALUE */
             data = Short.MAX_VALUE + 5;
             break;
-        }    
+        }     
 
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }    
+        }     
 
-    }    
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -47,19 +47,19 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_16 extends Abstr
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
             break;
-        }    
+        }     
 
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }    
+        }     
 
-    }    
+    }     
 
     public void good() throws Throwable
     {
         goodG2B();
-    }    
+    }     
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -70,5 +70,5 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_byte_16 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }    
-}    
+    }     
+}     

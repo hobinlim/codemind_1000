@@ -34,24 +34,24 @@ public class CWE197_Numeric_Truncation_Error__short_Property_01 extends Abstract
             try
             {
                 data = Short.parseShort(stringNumber.trim());
-            }  
+            }   
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-            }  
-        }  
+            }   
+        }   
 
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }  
+        }   
 
-    }  
+    }   
 
     public void good() throws Throwable
     {
         goodG2B();
-    }  
+    }   
 
     /* goodG2B() - uses goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -64,9 +64,9 @@ public class CWE197_Numeric_Truncation_Error__short_Property_01 extends Abstract
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }  
+        }   
 
-    }  
+    }   
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -77,6 +77,6 @@ public class CWE197_Numeric_Truncation_Error__short_Property_01 extends Abstract
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }  
-}  
+    }   
+}   
 

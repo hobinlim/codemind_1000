@@ -26,26 +26,26 @@ public class CWE209_Information_Leak_Error__printStackTrace_12 extends AbstractT
             try
             {
                 throw new UnsupportedOperationException();
-            }  
+            }   
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 exceptUnsupportedOperation.printStackTrace(); /* FLAW: Print stack trace to console on error */
-            }  
-        }  
+            }   
+        }   
         else
         {
 
             try
             {
                 throw new UnsupportedOperationException();
-            }  
+            }   
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 IO.writeLine("There was an unsupported operation error"); /* FIX: print a generic message */
-            }  
+            }   
 
-        }  
-    }  
+        }   
+    }   
 
     /* good1() changes the "if" so that both branches use the GoodSink */
     private void good1() throws Throwable
@@ -55,31 +55,31 @@ public class CWE209_Information_Leak_Error__printStackTrace_12 extends AbstractT
             try
             {
                 throw new UnsupportedOperationException();
-            }  
+            }   
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 IO.writeLine("There was an unsupported operation error"); /* FIX: print a generic message */
-            }  
-        }  
+            }   
+        }   
         else
         {
 
             try
             {
                 throw new UnsupportedOperationException();
-            }  
+            }   
             catch (UnsupportedOperationException exceptUnsupportedOperation)
             {
                 IO.writeLine("There was an unsupported operation error"); /* FIX: print a generic message */
-            }  
+            }   
 
-        }  
-    }  
+        }   
+    }   
 
     public void good() throws Throwable
     {
         good1();
-    }  
+    }   
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -90,5 +90,5 @@ public class CWE209_Information_Leak_Error__printStackTrace_12 extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }  
-}  
+    }   
+}   

@@ -54,17 +54,17 @@ public class CWE197_Numeric_Truncation_Error__short_database_61b
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }  
+                    }   
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }  
-                }  
-            }  
+                    }   
+                }   
+            }   
             catch (SQLException exceptSql)
             {
                 IO.logger.log(Level.WARNING, "Error with SQL statement", exceptSql);
-            }  
+            }   
             finally
             {
                 /* Close database objects */
@@ -73,41 +73,41 @@ public class CWE197_Numeric_Truncation_Error__short_database_61b
                     if (resultSet != null)
                     {
                         resultSet.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing ResultSet", exceptSql);
-                }  
+                }   
 
                 try
                 {
                     if (preparedStatement != null)
                     {
                         preparedStatement.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing PreparedStatement", exceptSql);
-                }  
+                }   
 
                 try
                 {
                     if (connection != null)
                     {
                         connection.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (SQLException exceptSql)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Connection", exceptSql);
-                }  
-            }  
-        }  
+                }   
+            }   
+        }   
 
         return data;
-    }  
+    }   
 
     /* goodG2B() - use goodsource and badsink */
     public short goodG2BSource() throws Throwable
@@ -118,5 +118,5 @@ public class CWE197_Numeric_Truncation_Error__short_database_61b
         data = 2;
 
         return data;
-    }  
-}  
+    }   
+}   
