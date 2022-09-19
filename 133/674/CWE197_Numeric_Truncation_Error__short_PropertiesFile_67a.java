@@ -29,7 +29,7 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_67a extends A
     static class Container
     {
         public short containerOne;
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -54,17 +54,17 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_67a extends A
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }
+                    } 
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }
-                }
-            }
+                    } 
+                } 
+            } 
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }
+            } 
             finally
             {
                 /* Close stream reading object */
@@ -73,24 +73,24 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_67a extends A
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }
-                }
+                    } 
+                } 
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }
-            }
-        }
+                } 
+            } 
+        } 
 
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE197_Numeric_Truncation_Error__short_PropertiesFile_67b()).badSink(dataContainer  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -103,7 +103,7 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_67a extends A
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE197_Numeric_Truncation_Error__short_PropertiesFile_67b()).goodG2BSink(dataContainer  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -114,5 +114,5 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_67a extends A
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

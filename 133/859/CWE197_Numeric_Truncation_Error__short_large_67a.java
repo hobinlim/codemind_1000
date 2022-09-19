@@ -22,7 +22,7 @@ public class CWE197_Numeric_Truncation_Error__short_large_67a extends AbstractTe
     static class Container
     {
         public short containerOne;
-    }
+    } 
 
     public void bad() throws Throwable
     {
@@ -34,12 +34,12 @@ public class CWE197_Numeric_Truncation_Error__short_large_67a extends AbstractTe
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE197_Numeric_Truncation_Error__short_large_67b()).badSink(dataContainer  );
-    }
+    } 
 
     public void good() throws Throwable
     {
         goodG2B();
-    }
+    } 
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -52,7 +52,7 @@ public class CWE197_Numeric_Truncation_Error__short_large_67a extends AbstractTe
         Container dataContainer = new Container();
         dataContainer.containerOne = data;
         (new CWE197_Numeric_Truncation_Error__short_large_67b()).goodG2BSink(dataContainer  );
-    }
+    } 
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -63,5 +63,5 @@ public class CWE197_Numeric_Truncation_Error__short_large_67a extends AbstractTe
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }
-}
+    } 
+} 

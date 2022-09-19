@@ -25,7 +25,7 @@ public class CWE197_Numeric_Truncation_Error__int_random_to_byte_81_bad extends 
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }  
+        }   
 
-    }  
-}  
+    }   
+}   

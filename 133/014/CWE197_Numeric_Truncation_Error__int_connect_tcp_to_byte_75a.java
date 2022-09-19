@@ -58,17 +58,17 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }  
+                    }   
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }  
-                }  
-            }  
+                    }   
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }  
+            }   
             finally
             {
                 /* clean up stream reading objects */
@@ -77,24 +77,24 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }  
+                }   
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }  
+                }   
 
                 /* clean up socket objects */
                 try
@@ -102,14 +102,14 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
                     if (socket != null)
                     {
                         socket.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }  
-            }  
-        }  
+                }   
+            }   
+        }   
 
         /* serialize data to a byte array */
         ByteArrayOutputStream streamByteArrayOutput = null;
@@ -122,11 +122,11 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75b()).badSink(dataSerialized  );
-        }  
+        }   
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }  
+        }   
         finally
         {
             /* clean up stream writing objects */
@@ -135,31 +135,31 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }  
-            }  
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }  
+            }   
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }  
-            }  
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }  
-        }  
-    }  
+            }   
+        }   
+    }   
 
     public void good() throws Throwable
     {
         goodG2B();
-    }  
+    }   
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -180,11 +180,11 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75b()).goodG2BSink(dataSerialized  );
-        }  
+        }   
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }  
+        }   
         finally
         {
             /* clean up stream writing objects */
@@ -193,26 +193,26 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }  
-            }  
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }  
+            }   
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }  
-            }  
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }  
-        }  
-    }  
+            }   
+        }   
+    }   
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -223,5 +223,5 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_75a extend
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }  
-}  
+    }   
+}   
