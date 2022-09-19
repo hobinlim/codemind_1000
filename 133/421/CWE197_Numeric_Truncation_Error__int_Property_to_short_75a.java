@@ -38,12 +38,12 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
             try
             {
                 data = Integer.parseInt(stringNumber.trim());
-            } 
+            }  
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-            } 
-        } 
+            }  
+        }  
 
         /* serialize data to a byte array */
         ByteArrayOutputStream streamByteArrayOutput = null;
@@ -56,11 +56,11 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_Property_to_short_75b()).badSink(dataSerialized  );
-        } 
+        }  
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        } 
+        }  
         finally
         {
             /* clean up stream writing objects */
@@ -69,31 +69,31 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
                 if (outputObject != null)
                 {
                     outputObject.close();
-                } 
-            } 
+                }  
+            }  
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            } 
+            }  
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                } 
-            } 
+                }  
+            }  
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            } 
-        } 
-    } 
+            }  
+        }  
+    }  
 
     public void good() throws Throwable
     {
         goodG2B();
-    } 
+    }  
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -114,11 +114,11 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_Property_to_short_75b()).goodG2BSink(dataSerialized  );
-        } 
+        }  
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        } 
+        }  
         finally
         {
             /* clean up stream writing objects */
@@ -127,26 +127,26 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
                 if (outputObject != null)
                 {
                     outputObject.close();
-                } 
-            } 
+                }  
+            }  
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            } 
+            }  
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                } 
-            } 
+                }  
+            }  
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            } 
-        } 
-    } 
+            }  
+        }  
+    }  
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -157,5 +157,5 @@ public class CWE197_Numeric_Truncation_Error__int_Property_to_short_75a extends 
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    } 
-} 
+    }  
+}  

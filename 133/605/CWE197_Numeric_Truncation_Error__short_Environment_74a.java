@@ -37,25 +37,25 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_74a extends Abst
                 try
                 {
                     data = Short.parseShort(stringNumber.trim());
-                } 
+                }  
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                } 
-            } 
-        } 
+                }  
+            }  
+        }  
 
         HashMap<Integer,Short> dataHashMap = new HashMap<Integer,Short>();
         dataHashMap.put(0, data);
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE197_Numeric_Truncation_Error__short_Environment_74b()).badSink(dataHashMap  );
-    } 
+    }  
 
     public void good() throws Throwable
     {
         goodG2B();
-    } 
+    }  
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -70,7 +70,7 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_74a extends Abst
         dataHashMap.put(1, data);
         dataHashMap.put(2, data);
         (new CWE197_Numeric_Truncation_Error__short_Environment_74b()).goodG2BSink(dataHashMap  );
-    } 
+    }  
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -81,5 +81,5 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_74a extends Abst
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    } 
-} 
+    }  
+}  

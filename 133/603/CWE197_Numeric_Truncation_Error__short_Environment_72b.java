@@ -27,9 +27,9 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_72b
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        } 
+        }  
 
-    } 
+    }  
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(Vector<Short> dataVector ) throws Throwable
@@ -39,7 +39,7 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_72b
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        } 
+        }  
 
-    } 
-} 
+    }  
+}  

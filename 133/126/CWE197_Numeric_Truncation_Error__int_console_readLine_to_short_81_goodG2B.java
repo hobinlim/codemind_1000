@@ -25,7 +25,7 @@ public class CWE197_Numeric_Truncation_Error__int_console_readLine_to_short_81_g
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        } 
+        }  
 
-    } 
-} 
+    }  
+}  

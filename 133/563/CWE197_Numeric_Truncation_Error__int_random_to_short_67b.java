@@ -26,9 +26,9 @@ public class CWE197_Numeric_Truncation_Error__int_random_to_short_67b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        } 
+        }  
 
-    } 
+    }  
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(CWE197_Numeric_Truncation_Error__int_random_to_short_67a.Container dataContainer ) throws Throwable
@@ -38,7 +38,7 @@ public class CWE197_Numeric_Truncation_Error__int_random_to_short_67b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        } 
+        }  
 
-    } 
-} 
+    }  
+}  
