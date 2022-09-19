@@ -56,17 +56,17 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72a extend
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }  
+                    }   
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }  
-                }  
-            }  
+                    }   
+                }   
+            }   
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }  
+            }   
             finally
             {
                 /* clean up stream reading objects */
@@ -75,24 +75,24 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72a extend
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }  
+                }   
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }  
+                }   
 
                 /* clean up socket objects */
                 try
@@ -100,26 +100,26 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72a extend
                     if (socket != null)
                     {
                         socket.close();
-                    }  
-                }  
+                    }   
+                }   
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }  
-            }  
-        }  
+                }   
+            }   
+        }   
 
         Vector<Integer> dataVector = new Vector<Integer>(5);
         dataVector.add(0, data);
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72b()).badSink(dataVector  );
-    }  
+    }   
 
     public void good() throws Throwable
     {
         goodG2B();
-    }  
+    }   
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -134,7 +134,7 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72a extend
         dataVector.add(1, data);
         dataVector.add(2, data);
         (new CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72b()).goodG2BSink(dataVector  );
-    }  
+    }   
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -145,6 +145,6 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_72a extend
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }  
+    }   
 
-}  
+}   
