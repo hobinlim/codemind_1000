@@ -19,7 +19,7 @@
         <variant cwe="CWE-584" name="CWE-584-A">
             <crossover_point file_name="/tmp/tmpSJP_v1_ss_testcase/src/com/planet_ink/coffee_mud/Races/WaterFowl.java" line_number="0">
                 <method name="getAbsolutePath"/>
-            </crossover_point>
+            </crossover_point> 
             <trigger_point file_name="/tmp/tmpSJP_v1_ss_testcase/src/com/planet_ink/coffee_mud/Races/WaterFowl.java" line_number="0">
                 <method name="lugwormSilvern"/>
             </trigger_point>
