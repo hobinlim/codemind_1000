@@ -26,14 +26,14 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_61a extend
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }      
+        }       
 
-    }      
+    }       
 
     public void good() throws Throwable
     {
         goodG2B();
-    }      
+    }       
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -43,9 +43,9 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_61a extend
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }      
+        }       
 
-    }      
+    }       
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -56,5 +56,5 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_byte_61a extend
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }      
-}      
+    }       
+}       

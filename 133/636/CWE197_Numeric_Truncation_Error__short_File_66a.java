@@ -55,17 +55,17 @@ public class CWE197_Numeric_Truncation_Error__short_File_66a extends AbstractTes
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }     
+                    }      
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }     
-                }     
-            }     
+                    }      
+                }      
+            }      
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }     
+            }      
             finally
             {
                 /* Close stream reading objects */
@@ -74,48 +74,48 @@ public class CWE197_Numeric_Truncation_Error__short_File_66a extends AbstractTes
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }     
+                }      
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }     
+                }      
 
                 try
                 {
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }     
-            }     
-        }     
+                }      
+            }      
+        }      
 
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_File_66b()).badSink(dataArray  );
-    }     
+    }      
 
     public void good() throws Throwable
     {
         goodG2B();
-    }     
+    }      
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -128,7 +128,7 @@ public class CWE197_Numeric_Truncation_Error__short_File_66a extends AbstractTes
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_File_66b()).goodG2BSink(dataArray  );
-    }     
+    }      
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -139,5 +139,5 @@ public class CWE197_Numeric_Truncation_Error__short_File_66a extends AbstractTes
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }     
-}     
+    }      
+}      

@@ -55,17 +55,17 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_short_17 extend
                     try
                     {
                         data = Integer.parseInt(stringNumber.trim());
-                    }      
+                    }       
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }      
-                }      
-            }      
+                    }       
+                }       
+            }       
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }      
+            }       
             finally
             {
                 /* clean up stream reading objects */
@@ -74,24 +74,24 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_short_17 extend
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }      
+                }       
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }      
+                }       
 
                 /* clean up socket objects */
                 try
@@ -99,23 +99,23 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_short_17 extend
                     if (socket != null)
                     {
                         socket.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }      
-            }      
-        }      
+                }       
+            }       
+        }       
 
         for (int i = 0; i < 1; i++)
         {
             {
                 /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
                 IO.writeLine((short)data);
-            }      
-        }      
-    }      
+            }       
+        }       
+    }       
 
     /* goodG2B() - use goodsource and badsink by reversing the block outside the
      * for statement with the one in the for statement */
@@ -131,14 +131,14 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_short_17 extend
             {
                 /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
                 IO.writeLine((short)data);
-            }      
-        }      
-    }      
+            }       
+        }       
+    }       
 
     public void good() throws Throwable
     {
         goodG2B();
-    }      
+    }       
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -149,5 +149,5 @@ public class CWE197_Numeric_Truncation_Error__int_connect_tcp_to_short_17 extend
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }      
-}      
+    }       
+}       

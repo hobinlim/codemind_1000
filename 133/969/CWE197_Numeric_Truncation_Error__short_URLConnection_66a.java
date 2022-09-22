@@ -54,17 +54,17 @@ public class CWE197_Numeric_Truncation_Error__short_URLConnection_66a extends Ab
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }    
+                    }     
                     catch (NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }    
-                }    
-            }    
+                    }     
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }    
+            }     
             finally
             {
                 /* clean up stream reading objects */
@@ -73,36 +73,36 @@ public class CWE197_Numeric_Truncation_Error__short_URLConnection_66a extends Ab
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }    
-                }    
+                    }     
+                }     
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }    
+                }     
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }    
-                }    
+                    }     
+                }     
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }    
-            }    
-        }    
+                }     
+            }     
+        }     
 
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_URLConnection_66b()).badSink(dataArray  );
-    }    
+    }     
 
     public void good() throws Throwable
     {
         goodG2B();
-    }    
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -115,7 +115,7 @@ public class CWE197_Numeric_Truncation_Error__short_URLConnection_66a extends Ab
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_URLConnection_66b()).goodG2BSink(dataArray  );
-    }    
+    }     
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -126,5 +126,5 @@ public class CWE197_Numeric_Truncation_Error__short_URLConnection_66a extends Ab
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }    
-}    
+    }     
+}     

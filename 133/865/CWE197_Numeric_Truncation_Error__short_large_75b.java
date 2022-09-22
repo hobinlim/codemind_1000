@@ -38,17 +38,17 @@ public class CWE197_Numeric_Truncation_Error__short_large_75b
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }    
+            }     
 
-        }    
+        }     
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }    
+        }     
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }    
+        }     
         finally
         {
             /* clean up stream reading objects */
@@ -57,26 +57,26 @@ public class CWE197_Numeric_Truncation_Error__short_large_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }    
-            }    
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }    
+            }     
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }    
-            }    
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }    
-        }    
-    }    
+            }     
+        }     
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(byte[] dataSerialized ) throws Throwable
@@ -94,17 +94,17 @@ public class CWE197_Numeric_Truncation_Error__short_large_75b
             {
                 /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
                 IO.writeLine((byte)data);
-            }    
+            }     
 
-        }    
+        }     
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in deserialization", exceptIO);
-        }    
+        }     
         catch (ClassNotFoundException exceptClassNotFound)
         {
             IO.logger.log(Level.WARNING, "ClassNotFoundException in deserialization", exceptClassNotFound);
-        }    
+        }     
         finally
         {
             /* clean up stream reading objects */
@@ -113,24 +113,24 @@ public class CWE197_Numeric_Truncation_Error__short_large_75b
                 if (streamObjectInput != null)
                 {
                     streamObjectInput.close();
-                }    
-            }    
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectInputStream", exceptIO);
-            }    
+            }     
 
             try
             {
                 if (streamByteArrayInput != null)
                 {
                     streamByteArrayInput.close();
-                }    
-            }    
+                }     
+            }     
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayInputStream", exceptIO);
-            }    
-        }    
-    }    
-}    
+            }     
+        }     
+    }     
+}     

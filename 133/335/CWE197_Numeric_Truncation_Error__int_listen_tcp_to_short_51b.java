@@ -24,9 +24,9 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_51b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }      
+        }       
 
-    }      
+    }       
 
     /* goodG2B() - use goodsource and badsink */
     public void goodG2BSink(int data ) throws Throwable
@@ -35,7 +35,7 @@ public class CWE197_Numeric_Truncation_Error__int_listen_tcp_to_short_51b
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }      
+        }       
 
-    }      
-}      
+    }       
+}       

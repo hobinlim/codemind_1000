@@ -31,12 +31,12 @@ public class CWE197_Numeric_Truncation_Error__short_random_66a extends AbstractT
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_random_66b()).badSink(dataArray  );
-    }    
+    }     
 
     public void good() throws Throwable
     {
         goodG2B();
-    }    
+    }     
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -49,7 +49,7 @@ public class CWE197_Numeric_Truncation_Error__short_random_66a extends AbstractT
         short[] dataArray = new short[5];
         dataArray[2] = data;
         (new CWE197_Numeric_Truncation_Error__short_random_66b()).goodG2BSink(dataArray  );
-    }    
+    }     
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -60,5 +60,5 @@ public class CWE197_Numeric_Truncation_Error__short_random_66a extends AbstractT
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }    
-}    
+    }     
+}     

@@ -25,7 +25,7 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_81_bad extends 
         {
             /* POTENTIAL FLAW: Convert data to a short, possibly causing a truncation error */
             IO.writeLine((short)data);
-        }      
+        }       
 
-    }      
-}      
+    }       
+}       
