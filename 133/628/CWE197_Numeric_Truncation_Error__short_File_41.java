@@ -32,9 +32,9 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }      
+        }       
 
-    }      
+    }       
 
     public void bad() throws Throwable
     {
@@ -64,17 +64,17 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }      
+                    }       
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }      
-                }      
-            }      
+                    }       
+                }       
+            }       
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }      
+            }       
             finally
             {
                 /* Close stream reading objects */
@@ -83,46 +83,46 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }      
+                }       
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }      
+                }       
 
                 try
                 {
                     if (streamFileInput != null)
                     {
                         streamFileInput.close();
-                    }      
-                }      
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                }      
-            }      
-        }      
+                }       
+            }       
+        }       
 
         badSink(data  );
-    }      
+    }       
 
     public void good() throws Throwable
     {
         goodG2B();
-    }      
+    }       
 
     private void goodG2BSink(short data ) throws Throwable
     {
@@ -130,9 +130,9 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }      
+        }       
 
-    }      
+    }       
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -143,7 +143,7 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
         data = 2;
 
         goodG2BSink(data  );
-    }      
+    }       
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -154,5 +154,5 @@ public class CWE197_Numeric_Truncation_Error__short_File_41 extends AbstractTest
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }      
-}      
+    }       
+}       

@@ -36,16 +36,16 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_61b
                 try
                 {
                     data = Short.parseShort(stringNumber.trim());
-                }       
+                }        
                 catch(NumberFormatException exceptNumberFormat)
                 {
                     IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                }       
-            }       
-        }       
+                }        
+            }        
+        }        
 
         return data;
-    }       
+    }        
 
     /* goodG2B() - use goodsource and badsink */
     public short goodG2BSource() throws Throwable
@@ -56,5 +56,5 @@ public class CWE197_Numeric_Truncation_Error__short_Environment_61b
         data = 2;
 
         return data;
-    }       
-}       
+    }        
+}        

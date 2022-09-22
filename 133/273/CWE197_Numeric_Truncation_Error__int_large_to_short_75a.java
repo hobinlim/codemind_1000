@@ -42,11 +42,11 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_75a extends Abs
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_large_to_short_75b()).badSink(dataSerialized  );
-        }       
+        }        
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }       
+        }        
         finally
         {
             /* clean up stream writing objects */
@@ -55,31 +55,31 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_75a extends Abs
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }       
-            }       
+                }        
+            }        
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }       
+            }        
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }       
-            }       
+                }        
+            }        
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }       
-        }       
-    }       
+            }        
+        }        
+    }        
 
     public void good() throws Throwable
     {
         goodG2B();
-    }       
+    }        
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -100,11 +100,11 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_75a extends Abs
             outputObject.writeObject(data);
             byte[] dataSerialized = streamByteArrayOutput.toByteArray();
             (new CWE197_Numeric_Truncation_Error__int_large_to_short_75b()).goodG2BSink(dataSerialized  );
-        }       
+        }        
         catch (IOException exceptIO)
         {
             IO.logger.log(Level.WARNING, "IOException in serialization", exceptIO);
-        }       
+        }        
         finally
         {
             /* clean up stream writing objects */
@@ -113,26 +113,26 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_75a extends Abs
                 if (outputObject != null)
                 {
                     outputObject.close();
-                }       
-            }       
+                }        
+            }        
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ObjectOutputStream", exceptIO);
-            }       
+            }        
 
             try
             {
                 if (streamByteArrayOutput != null)
                 {
                     streamByteArrayOutput.close();
-                }       
-            }       
+                }        
+            }        
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error closing ByteArrayOutputStream", exceptIO);
-            }       
-        }       
-    }       
+            }        
+        }        
+    }        
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -143,5 +143,5 @@ public class CWE197_Numeric_Truncation_Error__int_large_to_short_75a extends Abs
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }       
-}       
+    }        
+}        

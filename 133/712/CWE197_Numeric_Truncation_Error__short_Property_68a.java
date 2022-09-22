@@ -34,20 +34,20 @@ public class CWE197_Numeric_Truncation_Error__short_Property_68a extends Abstrac
             try
             {
                 data = Short.parseShort(stringNumber.trim());
-            }     
+            }      
             catch(NumberFormatException exceptNumberFormat)
             {
                 IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-            }     
-        }     
+            }      
+        }      
 
         (new CWE197_Numeric_Truncation_Error__short_Property_68b()).badSink();
-    }     
+    }      
 
     public void good() throws Throwable
     {
         goodG2B();
-    }     
+    }      
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -57,7 +57,7 @@ public class CWE197_Numeric_Truncation_Error__short_Property_68a extends Abstrac
         data = 2;
 
         (new CWE197_Numeric_Truncation_Error__short_Property_68b()).goodG2BSink();
-    }     
+    }      
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -68,5 +68,5 @@ public class CWE197_Numeric_Truncation_Error__short_Property_68a extends Abstrac
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }     
-}     
+    }      
+}      

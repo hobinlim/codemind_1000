@@ -48,17 +48,17 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_22b
                         try
                         {
                             data = Short.parseShort(stringNumber.trim());
-                        }      
+                        }       
                         catch(NumberFormatException exceptNumberFormat)
                         {
                             IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                        }      
-                    }      
-                }      
+                        }       
+                    }       
+                }       
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-                }      
+                }       
                 finally
                 {
                     /* Close stream reading object */
@@ -67,23 +67,23 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_22b
                         if (streamFileInput != null)
                         {
                             streamFileInput.close();
-                        }      
-                    }      
+                        }       
+                    }       
                     catch (IOException exceptIO)
                     {
                         IO.logger.log(Level.WARNING, "Error closing FileInputStream", exceptIO);
-                    }      
-                }      
-            }      
-        }      
+                    }       
+                }       
+            }       
+        }       
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = 0;
-        }      
+        }       
         return data;
-    }      
+    }       
 
     /* goodG2B1() - use goodsource and badsink by setting the static variable to false instead of true */
     public short goodG2B1Source() throws Throwable
@@ -95,17 +95,17 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_22b
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = 0;
-        }      
+        }       
         else
         {
 
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
 
-        }      
+        }       
 
         return data;
-    }      
+    }       
 
     /* goodG2B2() - use goodsource and badsink by reversing the blocks in the if in the sink function */
     public short goodG2B2Source() throws Throwable
@@ -116,14 +116,14 @@ public class CWE197_Numeric_Truncation_Error__short_PropertiesFile_22b
         {
             /* FIX: Use a hardcoded number that won't cause underflow, overflow, divide by zero, or loss-of-precision issues */
             data = 2;
-        }      
+        }       
         else
         {
             /* INCIDENTAL: CWE 561 Dead Code, the code below will never run
              * but ensure data is inititialized before the Sink to avoid compiler errors */
             data = 0;
-        }      
+        }       
 
         return data;
-    }      
-}      
+    }       
+}       

@@ -36,9 +36,9 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }     
+        }      
 
-    }     
+    }      
 
     /* uses badsource and badsink */
     public void bad() throws Throwable
@@ -70,17 +70,17 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
                     try
                     {
                         data = Short.parseShort(stringNumber.trim());
-                    }     
+                    }      
                     catch(NumberFormatException exceptNumberFormat)
                     {
                         IO.logger.log(Level.WARNING, "Number format exception parsing data from string", exceptNumberFormat);
-                    }     
-                }     
-            }     
+                    }      
+                }      
+            }      
             catch (IOException exceptIO)
             {
                 IO.logger.log(Level.WARNING, "Error with stream reading", exceptIO);
-            }     
+            }      
             finally
             {
                 /* clean up stream reading objects */
@@ -89,24 +89,24 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
                     if (readerBuffered != null)
                     {
                         readerBuffered.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing BufferedReader", exceptIO);
-                }     
+                }      
 
                 try
                 {
                     if (readerInputStream != null)
                     {
                         readerInputStream.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing InputStreamReader", exceptIO);
-                }     
+                }      
 
                 /* clean up socket objects */
                 try
@@ -114,23 +114,23 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
                     if (socket != null)
                     {
                         socket.close();
-                    }     
-                }     
+                    }      
+                }      
                 catch (IOException exceptIO)
                 {
                     IO.logger.log(Level.WARNING, "Error closing Socket", exceptIO);
-                }     
-            }     
-        }     
+                }      
+            }      
+        }      
 
         dataBad = data;
         badSink();
-    }     
+    }      
 
     public void good() throws Throwable
     {
         goodG2B();
-    }     
+    }      
 
     private void goodG2BSink() throws Throwable
     {
@@ -139,9 +139,9 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
         {
             /* POTENTIAL FLAW: Convert data to a byte, possibly causing a truncation error */
             IO.writeLine((byte)data);
-        }     
+        }      
 
-    }     
+    }      
 
     /* goodG2B() - use goodsource and badsink */
     private void goodG2B() throws Throwable
@@ -153,7 +153,7 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
 
         dataGoodG2B = data;
         goodG2BSink();
-    }     
+    }      
 
     /* Below is the main(). It is only used when building this testcase on
      * its own for testing or for building a binary to use in testing binary
@@ -164,5 +164,5 @@ public class CWE197_Numeric_Truncation_Error__short_connect_tcp_45 extends Abstr
            InstantiationException, IllegalAccessException
     {
         mainFromParent(args);
-    }     
-}     
+    }      
+}      
